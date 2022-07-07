@@ -1,10 +1,3 @@
-export const dtFactory = {
-    create: () => {
-        return {
-        } as IDateTimeOperable
-    }
-};
-
 export interface IDateTimeOperable {
     year: number | undefined;
     month: number | undefined;
@@ -13,8 +6,10 @@ export interface IDateTimeOperable {
     minutes: number | undefined;
     seconds: number | undefined;
     timezone: ITimezone;
-    // add(operand: IDateOperable): IDateOperable;
-    // substract(operand: IDateOperable): IDateOperable;
+    originalValue: string | undefined;
+
+    add(operand: IDateTimeOperable): IDateTimeOperable;
+    substract(operand: IDateTimeOperable): IDateTimeOperable;
 }
 
 export interface ITimezone {
