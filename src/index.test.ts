@@ -199,7 +199,7 @@ describe('your-date-js tests', () => {
         });
     });
     describe('substract date objects', () => {
-        _.range(-10,-9,1).map((r: number) => {
+        _.range(-10,10,1).map((r: number) => {
             it('should substract', () => {
                 const dateTimeBuilder = new DateTimeBuilder();
                 const date1 = dateTimeBuilder
